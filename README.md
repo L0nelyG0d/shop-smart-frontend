@@ -68,3 +68,111 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+##  ShopSmart Frontend
+
+A clean and interactive React-based frontend for **ShopSmart** — a smart shopping list manager. Create, search, and manage shopping lists with live updates and a friendly UI.
+
+---
+
+###  Tech Stack
+
+* **React**
+* **Axios** (for API calls)
+* **CSS** (custom, responsive)
+* **React Hooks** (`useState`, `useEffect`)
+
+---
+
+###  Features
+
+*  Create and name new shopping lists
+*  Search existing lists by title
+*  Add items with cost
+* Toggle bought status with a checkbox
+*  Delete items (optional feature)
+*  Data saved via Spring Boot backend
+
+---
+
+###  Folder Structure
+
+```
+src/
+├── api/
+│   └── shoppingListApi.js      # Axios wrappers
+├── components/
+│   ├── ShoppingList.js         # Main component
+│   ├── AddItemForm.js          # Add item form
+│   └── ShoppingList.css        # Styling
+├── hooks/                      # Optional custom hooks
+├── App.js                      # Main entry
+└── index.js
+```
+
+---
+
+###  Getting Started
+
+#### 1. Install dependencies
+
+```bash
+npm install
+```
+
+#### 2. Run the development server
+
+```bash
+npm start
+```
+
+App runs on:
+ [http://localhost:3000](http://localhost:3000)
+
+---
+
+###  Backend API Configuration
+
+Make sure your backend is running on `http://localhost:8080`.
+If it differs, edit the base URL in `shoppingListApi.js`:
+
+```js
+const API_BASE = "http://localhost:8080";
+```
+
+---
+
+###  Example API Calls (via Axios)
+
+```js
+// Create a new list
+axios.post(`${API_BASE}/shopping-lists`, { title: "Groceries" })
+
+// Search by title
+axios.get(`${API_BASE}/shopping-lists/search?title=Groceries`)
+
+// Add item
+axios.post(`${API_BASE}/items/add`, { name, cost, shopping: { id } })
+
+// Toggle bought status
+axios.put(`${API_BASE}/items/update/${itemId}`)
+```
+
+---
+
+### UI Preview
+
+*Include screenshots here if needed (optional)*
+
+---
+
+###  Future Ideas
+
+* Real-time updates with WebSocket
+* Item quantity field
+* Mobile enhancements
+* Authentication
+
+
