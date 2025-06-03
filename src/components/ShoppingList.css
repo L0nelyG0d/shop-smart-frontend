@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bought {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.logo {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.input-section button {
+    padding: 10px 16px;
+    font-size: 1rem;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.input-section button:hover {
+    background-color: #0b5ed7;
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.item-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.item-list li span.quantity {
+    font-weight: bold;
+    color: #0d6efd;
+}
